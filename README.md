@@ -1,7 +1,5 @@
 <img src="https://swhackathon.com//image/main.png"></img>
 ## <a href="https://swhackathon.com/Team/Info/41">프로젝트 <strong>Polaris</strong>:북극성</a>
-
-## 어플리케이션 미리보기 !~!
 ![preview](./image/preview.png)
 
 ## 프로젝트 컨셉
