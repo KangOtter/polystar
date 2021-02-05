@@ -9,16 +9,15 @@
         android:roundIcon="@mipmap/applogov2_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".OutputActivity"></activity>
-        <activity android:name=".MainActivity5" />
-        <activity android:name=".MainActivity4" />
+
         <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
         <activity android:name=".JoinActivity" />
         <activity android:name=".StarQuestionActivity2" />
         <activity android:name=".StarQuestionActivity3" />
@@ -26,7 +25,10 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity3" />
+        <activity android:name=".MainActivity4" />
+        <activity android:name=".MainActivity5" />
         <activity android:name=".InputActivity" />
+        <activity android:name=".OutputActivity" />
         <activity android:name=".CalanderActivity" />
         <activity android:name=".StarActivity" />
         <activity android:name=".BookmarkActivity" />

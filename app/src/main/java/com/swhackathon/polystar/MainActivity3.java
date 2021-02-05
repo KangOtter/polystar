@@ -39,7 +39,7 @@ public class MainActivity3 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity4.class);
                 startActivity(intent);
-
+                finish();
             }
         });
 
