@@ -19,9 +19,9 @@
 
             <ImageButton
                 android:id="@+id/imageButton2"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginLeft="10dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="160dp"
                 android:background="@null"
@@ -32,7 +32,7 @@
                 android:id="@+id/profile_input2"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:layout_marginLeft="160dp"
+                android:layout_marginLeft="130dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:background="@null"
