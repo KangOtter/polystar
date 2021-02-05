@@ -31,7 +31,7 @@ public class InputActivity extends AppCompatActivity {
     String filename;
     EditText result;
     ImageButton checkButton;
-    int questionCount;
+    int questionCount=0;
     Calendar cal;
 
     @Override
@@ -41,21 +41,19 @@ public class InputActivity extends AppCompatActivity {
 
 
         //몇번째 질문인지 확인하는 변수
-        questionCount = 1;
-
         checkButton = findViewById(R.id.checkButton);
         result = findViewById(R.id.resultTxt);
         cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
-        String s = "hello\n"; //s대신 질문을 넣을 것!!
+        String s = BookmarkActivity.returnQuestion(questionCount)+"\n"; //s대신 질문을 넣을 것!!
 
 
         filename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
         String str = readDiary(filename);
         result.setText(str);
-        questionCount = questionCount + 1;
+
 
 
         //완료버튼 누를 시 파일에 입력값 입력
@@ -69,7 +67,7 @@ public class InputActivity extends AppCompatActivity {
                     outFs.write(str.getBytes());
                     outFs.close();
                     Toast.makeText(InputActivity.this, filename + "이 저장", Toast.LENGTH_SHORT).show();
-
+                    questionCount = questionCount + 1;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -174,7 +172,7 @@ public class InputActivity extends AppCompatActivity {
         });*/
     }
 
-    //파일을 출력하는 함..수?
+    //저장되어있는 답변을 읽어오는 함수
     private String readDiary(String filename) {
         String diaryStr = null;
         FileInputStream inFs;
@@ -188,9 +186,8 @@ public class InputActivity extends AppCompatActivity {
 
         }catch (IOException e){
             result.setHint("답을 입력해 주세요");
-
+            diaryStr="";
         }
-
         return diaryStr;
     }
 }

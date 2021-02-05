@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "367192554464",
+    "project_id": "polaris-cfafe",
+    "storage_bucket": "polaris-cfafe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367192554464:android:f442da81d7c42822014985",
+        "android_client_info": {
+          "package_name": "com.swhackathon.polystar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367192554464-0ehetierfc82v8l4bihcim6n0mh65dlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiYoyw1fGw5fvxUZcoMl8EaVs7rGOYGJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367192554464-0ehetierfc82v8l4bihcim6n0mh65dlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
