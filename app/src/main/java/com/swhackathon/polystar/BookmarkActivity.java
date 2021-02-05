@@ -217,13 +217,13 @@ public class BookmarkActivity extends AppCompatActivity {
         String res;
         switch(num){
             case 0:
-                res="좋아하는 물건과 그 이유는 무엇인가오?";
+                res="좋아하는 물건과 그 이유는 무엇인가요?";
                 break;
             case 1:
                 res="당신에게 성공이란 어떤 것인가요?";
                 break;
             case 2:
-                res="오늘 하지 못햇던 말이 있나요?";
+                res="오늘 하지 못했던 말이 있나요?";
                 break;
             case 3:
                 res="당신에게 가족이란 어떤 의미인가요?";
@@ -238,16 +238,16 @@ public class BookmarkActivity extends AppCompatActivity {
                 res="살면서 가장 잘한일은 무엇인가요?";
                 break;
             case 7:
-                res="최근에 성취감을 느낀 것은 어떤 때엿나요?";
+                res="최근에 성취감을 느낀 것은 어떤 때였나요?";
                 break;
             case 8:
-                res="요즘 당신의 가슴을뛰게하는 일이 있나요?";
+                res="요즘 당신의 가슴을 뛰게 하는 일이 있나요?";
                 break;
             case 9:
                 res="올해 안에 가장 도전해보고 싶은 것은 무엇인가요?";
                 break;
             case 10:
-                res="오늘의 자신을 세단어로 표현해본다면?";
+                res="오늘의 자신을 세 단어로 표현해본다면?";
                 break;
             default:
                 res="Error "+Integer.toString(num);
