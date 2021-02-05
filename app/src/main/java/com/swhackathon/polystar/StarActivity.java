@@ -24,7 +24,7 @@ public class StarActivity extends AppCompatActivity {
     String loginName, loginId;
     ImageButton imageEdit;
     ImageView imageProfile;
-
+    boolean[] light={false,false,false,false,false,false,false};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +80,150 @@ public class StarActivity extends AppCompatActivity {
             }
         });
 
+        ImageButton b1=(ImageButton)findViewById(R.id.b1Button);
+        ImageButton b2=(ImageButton)findViewById(R.id.b2Button);
+        ImageButton b3=(ImageButton)findViewById(R.id.b3Button);
+        ImageButton b4=(ImageButton)findViewById(R.id.b4Button);
+        ImageButton b5=(ImageButton)findViewById(R.id.b5Button);
+        ImageButton b6=(ImageButton)findViewById(R.id.b6Button);
+        ImageButton b7=(ImageButton)findViewById(R.id.b7Button);
+        ImageButton b8=(ImageButton)findViewById(R.id.b8Button);
+        ImageButton b9=(ImageButton)findViewById(R.id.b9Button);
+        ImageButton b10=(ImageButton)findViewById(R.id.b10Button);
+        ImageButton b11=(ImageButton)findViewById(R.id.b11Button);
+        ImageButton b12=(ImageButton)findViewById(R.id.b12Button);
+        /*
+            활성화 되어있는 5개
+        * */
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        b7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        b8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        b10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        b11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        /*
+            스위치
+        * */
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!light[0]){
+                    b1.setImageResource(R.drawable.ba1);
+                    light[0]=true;
+                }
+                else{
+                    b1.setImageResource(R.drawable.b1);
+                    light[0]=false;
+                }
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!light[1]){
+                    b2.setImageResource(R.drawable.ba2);
+                    light[1]=true;
+                }
+                else{
+                    b2.setImageResource(R.drawable.b2);
+                    light[1]=false;
+                }
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!light[2]){
+                    b4.setImageResource(R.drawable.ba4);
+                    light[2]=true;
+                }
+                else{
+                    b4.setImageResource(R.drawable.b4);
+                    light[2]=false;
+                }
+            }
+        });
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!light[3]){
+                    b5.setImageResource(R.drawable.ba5);
+                    light[3]=true;
+                }
+                else{
+                    b5.setImageResource(R.drawable.b5);
+                    light[3]=false;
+                }
+            }
+        });
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!light[4]){
+                    b6.setImageResource(R.drawable.ba6);
+                    light[4]=true;
+                }
+                else{
+                    b6.setImageResource(R.drawable.b6);
+                    light[4]=false;
+                }
+            }
+        });
+        b9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!light[5]){
+                    b9.setImageResource(R.drawable.ba9);
+                    light[5]=true;
+                }
+                else{
+                    b9.setImageResource(R.drawable.b9);
+                    light[5]=false;
+                }
+            }
+        });
+        b12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!light[6]){
+                    b12.setImageResource(R.drawable.ba12);
+                    light[6]=true;
+                }
+                else{
+                    b12.setImageResource(R.drawable.b12);
+                    light[6]=false;
+                }
+            }
+        });
         //프로필 정보 출력
         SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
 
