@@ -80,114 +80,130 @@
         android:id="@+id/StarButton1"
         android:layout_width="50dp"
         android:layout_height="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="172dp"
         android:background="@null"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.743"
         app:srcCompat="@drawable/s1" />
 
     <ImageButton
         android:id="@+id/StarButton2"
         android:layout_width="50dp"
         android:layout_height="60dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="172dp"
         android:background="@null"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.743"
         app:srcCompat="@drawable/s2" />
 
     <ImageButton
         android:id="@+id/StarButton3"
         android:layout_width="50dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="172dp"
         android:background="@null"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.743"
         app:srcCompat="@drawable/s3" />
 
     <ImageButton
         android:id="@+id/StarButton4"
         android:layout_width="50dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginBottom="172dp"
         android:background="@null"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.743"
         app:srcCompat="@drawable/s4" />
 
     <ImageButton
         android:id="@+id/StarButton5"
         android:layout_width="50dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="172dp"
         android:background="@null"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.828"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.743"
         app:srcCompat="@drawable/s5" />
 
     <ImageView
         android:id="@+id/starLine1"
         android:layout_width="225dp"
         android:layout_height="225dp"
-        android:layout_marginTop="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.994"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292"
         app:srcCompat="@null" />
 
     <ImageView
         android:id="@+id/starLine2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258"
         app:srcCompat="@null" />
 
     <ImageView
         android:id="@+id/starLine3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061"
         app:srcCompat="@null" />
 
     <ImageView
         android:id="@+id/starLine4"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="280dp"
+        app:layout_constraintBottom_toBottomOf="@+id/memoryButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466"
         app:srcCompat="@null" />
 
     <ImageView
         android:id="@+id/starLine5"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@null" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
