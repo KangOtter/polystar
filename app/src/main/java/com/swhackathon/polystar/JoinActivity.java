@@ -3,7 +3,6 @@ package com.swhackathon.polystar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -15,8 +14,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 
 public class JoinActivity extends AppCompatActivity {
@@ -24,6 +21,7 @@ public class JoinActivity extends AppCompatActivity {
     EditText name, id;
     ImageButton loginBtn;
     String loginName, loginId;
+
     ImageButton imageEdit;
     ImageView imageProfile;
 
@@ -32,24 +30,24 @@ public class JoinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-        name = (EditText) findViewById(R.id.inputName);
-        id = (EditText) findViewById(R.id.inputId);
-        loginBtn = (ImageButton) findViewById(R.id.loginBtn);
+        name = (EditText)findViewById(R.id.inputName);
+        id = (EditText)findViewById(R.id.inputId);
+        loginBtn = (ImageButton)findViewById(R.id.loginBtn);
 
         SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
 
         loginName = auto.getString("inputName", null);
         loginId = auto.getString("inputId", null);
 
-        // 이전 로그인 아이디가 남아있을 경우 (loginId != null)
+        //자동 로그인 O
         if (loginName != null && loginId != null) {
             Toast.makeText(getApplicationContext(), String.format("%s님 환영합니다.", loginName), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(JoinActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-        }
+        } //end if
 
-        // 이전 로그인 아이디가 남아있지 않은 경우 (loginId == null)
+        //자동 로그인 X
         else if (loginName == null || loginId == null) {
             loginBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -58,19 +56,20 @@ public class JoinActivity extends AppCompatActivity {
                     autoLogin.putString("inputId", id.getText().toString());
                     autoLogin.putString("inputName", name.getText().toString());
                     autoLogin.commit();
-                    //                                                           가이드라인 이동용
+
                     Intent intent = new Intent(JoinActivity.this, StarQuestionActivity2.class);
                     Toast.makeText(getApplicationContext(), "가입을 환영합니다.",Toast.LENGTH_SHORT).show();
                     startActivity(intent);
 
                     finish();
-                }
+                } //end onClick
             });
-        }
+
+        } //end else if
 
         // 갤러리 구현
-        imageProfile = (ImageView) findViewById(R.id.imageView5);
-        imageEdit = (ImageButton) findViewById(R.id.imageEdit);
+        imageProfile = (ImageView)findViewById(R.id.imageView5);
+        imageEdit = (ImageButton)findViewById(R.id.imageEdit);
 
         imageEdit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,9 +78,10 @@ public class JoinActivity extends AppCompatActivity {
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(intent, 1);
-            }
+            } //end onClick
         });
-    }
+
+    } //end onCreate
 
     @Override   //갤러리 들어가는 코드
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -99,8 +99,8 @@ public class JoinActivity extends AppCompatActivity {
                     imageProfile.setImageBitmap(img);
                 } catch (Exception e) {
                     e.printStackTrace();
-                }
-            }
-        }
-    }
-}
+                } //end catch
+            } //end if
+        } //end if
+    } //end onActivityResult
+} //end class

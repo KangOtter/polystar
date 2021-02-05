@@ -1,7 +1,7 @@
 package com.swhackathon.polystar;
-import androidx.appcompat.app.ActionBar;
+
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         //날짜 출력
         Date currentTime = Calendar.getInstance().getTime();
         String date = new SimpleDateFormat("MM月 / dd日", Locale.getDefault()).format(currentTime);
-
         TextView textView = findViewById(R.id.date);
-
         textView.setText(date);
 
+
         //네비게이션 바 버튼
+
         //홈버튼
         ImageButton home = (ImageButton) findViewById(R.id.homeButton);
         home.setOnClickListener(new View.OnClickListener() {
@@ -84,22 +84,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 임시용 로그아웃 버튼
-        Button logout = (Button)findViewById(R.id.logout);
-        logout.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, JoinActivity.class);
-                startActivity(intent);
-                SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
-                SharedPreferences.Editor editor = auto.edit();
-                editor.clear();
-                editor.commit();
-                Toast.makeText(MainActivity.this, "로그아웃.", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });
-
-    }
-}
+    } //end onCreate
+} //end class

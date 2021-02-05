@@ -3,7 +3,6 @@ package com.swhackathon.polystar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +14,10 @@ public class BookmarkActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookmark);
+
+
         //네비게이션 바 버튼
+
         //홈버튼
         ImageButton home = (ImageButton) findViewById(R.id.homeButton);
         home.setOnClickListener(new View.OnClickListener() {
@@ -46,16 +48,6 @@ public class BookmarkActivity extends AppCompatActivity {
             }
         });
 
-        //즐겨찾기버튼
-        /*ImageButton like = (ImageButton) findViewById(R.id.likeButton);
-        like.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), BookmarkActivity.class);
-                startActivity(intent);
-            }
-        });*/
-
         // 사용자정보 가기 버튼
         ImageButton profile_input = (ImageButton) findViewById(R.id.profile_input2);
         profile_input.setOnClickListener(new View.OnClickListener() {
@@ -76,9 +68,9 @@ public class BookmarkActivity extends AppCompatActivity {
             }
         });
 
-        /*
-        * 질문 연결하기
-        * */
+
+        //질문 연결하기
+
         Button Button3=findViewById(R.id.oneqButton);
         Button Button4=findViewById(R.id.twoqButton);
         Button Button5=findViewById(R.id.threeqButton);
@@ -102,6 +94,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,6 +106,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,6 +118,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -135,6 +130,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -146,6 +142,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,6 +154,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -168,6 +166,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -179,6 +178,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -190,6 +190,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -201,6 +202,7 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -212,9 +214,12 @@ public class BookmarkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-    public static String returnQuestion(int num){
+
+    } //end onCreate
+
+    public static String returnQuestion(int num) {
         String res;
+
         switch(num){
             case 0:
                 res="좋아하는 물건과 그 이유는 무엇인가요?";
@@ -252,7 +257,8 @@ public class BookmarkActivity extends AppCompatActivity {
             default:
                 res="Error "+Integer.toString(num);
                 break;
-        }
+        } //end switch
+
         return  res;
-    }
-}
+    } //end returnQuestion
+} //end class
