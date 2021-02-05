@@ -33,6 +33,13 @@ public class InputActivity extends AppCompatActivity {
     ImageButton checkButton;
     int questionCount=0;
     Calendar cal;
+    String String;
+    String[] Strings = {"어떤 삶을 살고 싶어?", "현재 프로필 사진은 어떤 거야?",
+            "오늘 하루 가장 기억에 남는 것은 뭐야?", "가장 속상했던 일은 뭐야?",
+            "오늘 자신을 세 단어로 표현해 본다면?","너의 취미는 뭐야?",
+            "다시 태어난다면 무엇으로 태어나고 싶어?","주말을 보내는 너만의 가장 행복한 방법은?",
+            "가장 최근에 신용카드로 구입한 물건은?","네 존재가 특별한 이유는 뭐라고 생각해?",
+            "오늘 하루 하늘을 몇 번 올려다보았어?"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -153,7 +160,9 @@ public class InputActivity extends AppCompatActivity {
                 TextView questionTxt = findViewById(R.id.questionTxt);   //질문란
                 EditText resultTxt = findViewById(R.id.resultTxt);   //대답란
 
-                // 질문 새로고침 db코드작성
+                int r = (int)(Math.random()*11);
+                questionTxt.setText(Strings[r]);
+                // 질문 새로고침 db 저장 작성
                 resultTxt.setText("");
             }
         });
