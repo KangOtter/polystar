@@ -21,31 +21,40 @@
         app:layout_constraintVertical_bias="0.54" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="228dp"
         app:cardCornerRadius="100dp"
         app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/profile" />
 
-        <ImageButton
-            android:id="@+id/imageEdit"
-            android:layout_width="31dp"
-            android:layout_height="29dp"
-            android:background="@null"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/edit" />
     </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/imageEdit"
+        android:layout_width="31dp"
+        android:layout_height="29dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32"
+        app:srcCompat="@drawable/edit" />
 
     <TextView
         android:id="@+id/textView2"
