@@ -3,6 +3,7 @@ package com.swhackathon.polystar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -12,6 +13,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -58,6 +61,11 @@ public class JoinActivity extends AppCompatActivity {
                     //                                                           가이드라인 이동용
                     Intent intent = new Intent(JoinActivity.this, StarQuestionActivity2.class);
                     startActivity(intent);
+                    SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = auto.edit();
+                    editor.clear();
+                    editor.commit();
+                    Toast.makeText(JoinActivity.this,"환영합니다.", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             });
