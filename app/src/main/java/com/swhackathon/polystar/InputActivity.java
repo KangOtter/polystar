@@ -1,14 +1,12 @@
 package com.swhackathon.polystar;
-import androidx.appcompat.app.ActionBar;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
+
 import android.os.Bundle;
-import android.os.Handler;
-import android.service.autofill.OnClickAction;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,16 +15,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Random;
 
-import org.w3c.dom.Text;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
 
 public class InputActivity extends AppCompatActivity {
-
-    //파일입력에 필요한 변수
 
     String filename;
     EditText result;
@@ -46,7 +40,6 @@ public class InputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
-
         //몇번째 질문인지 확인하는 변수
         checkButton = findViewById(R.id.checkButton);
         result = findViewById(R.id.resultTxt);
@@ -56,11 +49,9 @@ public class InputActivity extends AppCompatActivity {
         int day = cal.get(Calendar.DAY_OF_MONTH);
         String s = BookmarkActivity.returnQuestion(questionCount)+"\n"; //s대신 질문을 넣을 것!!
 
-
         filename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
         String str = readDiary(filename);
         result.setText(str);
-
 
 
         //완료버튼 누를 시 파일에 입력값 입력
@@ -78,14 +69,12 @@ public class InputActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
         });
 
 
-
-
         //네비게이션 바 버튼
+
         //홈버튼
         ImageButton home1 = (ImageButton) findViewById(R.id.homeButton1);
         home1.setOnClickListener(new View.OnClickListener() {
@@ -150,7 +139,6 @@ public class InputActivity extends AppCompatActivity {
 
 
 
-
         // 질문 새로고침
         ImageButton reButton = (ImageButton) findViewById(R.id.reButton);
         reButton.setOnClickListener(new View.OnClickListener() {
@@ -166,19 +154,6 @@ public class InputActivity extends AppCompatActivity {
                 resultTxt.setText("");
             }
         });
-
-
-
-        //완료버튼
-        /*ImageButton checkButton = (ImageButton) findViewById(R.id.checkButton);
-        checkButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                //db
-
-            }
-        });*/
     }
 
     //저장되어있는 답변을 읽어오는 함수
