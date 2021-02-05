@@ -1,7 +1,9 @@
 <img src="https://swhackathon.com//image/main.png"></img>
-## 프로젝트명
-  <a href="https://swhackathon.com/Team/Info/41"><strong>북극성</strong></a>
-  ======
+## <a href="https://swhackathon.com/Team/Info/41">프로젝트 <strong>Polaris</strong>:북극성</a>
+
+## 어플리케이션 미리보기 !~!
+![preview](./image/preview.png)
+
 ## 프로젝트 컨셉
 <p align="center">
   우리에게 가장 친숙한 별, <strong>북극성</strong><br>
@@ -25,9 +27,7 @@
 그들은 저마다 자신만의 나침반을 가슴에 담고 있습니다.<br>
 </p>
 
-## 어플리케이션 미리보기 !~!
-![first](./image/first.png)
-![third](./image/third.png)
+
 
 ## 프로젝트 개발 동기
 <dl>
