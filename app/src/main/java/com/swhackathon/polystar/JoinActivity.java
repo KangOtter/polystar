@@ -43,7 +43,6 @@ public class JoinActivity extends AppCompatActivity {
 
         // 이전 로그인 아이디가 남아있을 경우 (loginId != null)
         if (loginName != null && loginId != null) {
-            //                                                           자동로그인
             Intent intent = new Intent(JoinActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
@@ -61,11 +60,6 @@ public class JoinActivity extends AppCompatActivity {
                     //                                                           가이드라인 이동용
                     Intent intent = new Intent(JoinActivity.this, StarQuestionActivity2.class);
                     startActivity(intent);
-                    SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = auto.edit();
-                    editor.clear();
-                    editor.commit();
-                    Toast.makeText(JoinActivity.this,"환영합니다.", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             });
@@ -103,14 +97,7 @@ public class JoinActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
             }
-
-
         }
-
-
     }
-
-
 }
