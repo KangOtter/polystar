@@ -87,9 +87,9 @@ public class StarActivity extends AppCompatActivity {
         ImageButton b5=(ImageButton)findViewById(R.id.b5Button);
         ImageButton b6=(ImageButton)findViewById(R.id.b6Button);
         ImageButton b7=(ImageButton)findViewById(R.id.b7Button);
-        ImageButton b8=(ImageButton)findViewById(R.id.b8Button);
+        //ImageButton b8=(ImageButton)findViewById(R.id.b8Button);
         ImageButton b9=(ImageButton)findViewById(R.id.b9Button);
-        ImageButton b10=(ImageButton)findViewById(R.id.b10Button);
+        //ImageButton b10=(ImageButton)findViewById(R.id.b10Button);
         ImageButton b11=(ImageButton)findViewById(R.id.b11Button);
         ImageButton b12=(ImageButton)findViewById(R.id.b12Button);
         /*
@@ -106,20 +106,6 @@ public class StarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarInfoActivity3.class);
-                startActivity(intent);
-            }
-        });
-        b8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-        b10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
