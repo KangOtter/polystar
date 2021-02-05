@@ -98,14 +98,14 @@ public class StarActivity extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), StarInfoActivity2.class);
                 startActivity(intent);
             }
         });
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), StarInfoActivity3.class);
                 startActivity(intent);
             }
         });
@@ -126,7 +126,7 @@ public class StarActivity extends AppCompatActivity {
         b11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), StarInfoActivity.class);
                 startActivity(intent);
             }
         });
