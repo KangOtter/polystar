@@ -163,19 +163,6 @@ public class InputActivity extends AppCompatActivity {
 
             }
         });*/
-        /*
-         * intent 불러오기
-         * */
-        Intent intent= getIntent();
-        if(intent.hasExtra("질문")) {
-            String qmsg = intent.getStringExtra("질문");
-            String amsg = intent.getStringExtra("답");
-            TextView qtextView = (TextView) findViewById(R.id.questionTxt);
-            qtextView.setText(qmsg);
-            TextView atextView = (TextView) findViewById(R.id.resultTxt);
-            atextView.setText(amsg);
-        }
-
     }
 
     //파일을 출력하는 함..수?

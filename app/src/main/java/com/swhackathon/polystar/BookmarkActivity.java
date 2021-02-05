@@ -94,7 +94,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(0));
@@ -105,7 +105,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(1));
@@ -116,7 +116,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(2));
@@ -127,7 +127,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(3));
@@ -138,7 +138,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(4));
@@ -149,7 +149,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(5));
@@ -160,7 +160,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(6));
@@ -171,7 +171,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(7));
@@ -182,7 +182,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(8));
@@ -193,7 +193,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(9));
@@ -204,7 +204,7 @@ public class BookmarkActivity extends AppCompatActivity {
         imageButton13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OutputActivity.class);
                 //질문페이지로 연결
                 //인텐트 전달
                 intent.putExtra("질문",returnQuestion(10));
