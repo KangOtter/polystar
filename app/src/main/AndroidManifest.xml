@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/applogov2_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".MainActivity5"></activity>
+        <activity android:name=".OutputActivity"></activity>
+        <activity android:name=".MainActivity5" />
         <activity android:name=".MainActivity4" />
         <activity android:name=".IntroActivity">
             <intent-filter>
