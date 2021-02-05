@@ -22,7 +22,6 @@ import java.io.InputStream;
 public class StarActivity extends AppCompatActivity {
 
     String loginName, loginId;
-
     ImageButton imageEdit;
     ImageView imageProfile;
 

@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Random;
 
 import org.w3c.dom.Text;
 
@@ -140,18 +141,26 @@ public class InputActivity extends AppCompatActivity {
             }
         });
 
+        Random random = new Random();
+
+
+
+
         // 질문 새로고침
         ImageButton reButton = (ImageButton) findViewById(R.id.reButton);
         reButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                TextView questionTxt = findViewById(R.id.questionTxt);
-                EditText resultTxt = findViewById(R.id.resultTxt);
+                TextView questionTxt = findViewById(R.id.questionTxt);   //질문란
+                EditText resultTxt = findViewById(R.id.resultTxt);   //대답란
+
                 // 질문 새로고침 db코드작성
                 resultTxt.setText("");
             }
         });
+
+
 
         //완료버튼
         /*ImageButton checkButton = (ImageButton) findViewById(R.id.checkButton);
