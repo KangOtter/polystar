@@ -48,106 +48,326 @@
             android:layout_gravity="center"
             app:srcCompat="@drawable/qtitle" />
 
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"/>
+
         <ScrollView
 
             android:layout_width="match_parent"
-            android:layout_height="430dp">
+            android:layout_height="380dp">
 
             <LinearLayout
-                android:layout_marginTop="75dp"
-                android:layout_gravity="center"
-                android:layout_width="320dp"
+                android:layout_width="350dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical" >
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/imageButton3"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q1" />
-                <ImageButton
-                    android:id="@+id/imageButton4"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q2" />
-                <ImageButton
-                    android:id="@+id/imageButton5"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q3" />
-                <ImageButton
-                    android:id="@+id/imageButton6"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q4" />
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/imageButton7"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q5" />
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
 
-                <ImageButton
-                    android:id="@+id/imageButton8"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q6" />
-                <ImageButton
-                    android:id="@+id/imageButton9"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q7" />
-                <ImageButton
-                    android:id="@+id/imageButton10"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q8" />
-                <ImageButton
-                    android:id="@+id/imageButton11"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q9" />
-                <ImageButton
-                    android:id="@+id/imageButton12"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q10" />
-                <ImageButton
-                    android:id="@+id/imageButton13"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/q11"/>
+                    <Button
+                        android:id="@+id/oneqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="좋아하는 물건과 그 이유는 무엇인가요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/twoqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="당신에게 성공이란 어떤 것인가요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/threeqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="오늘하지 못했던 말이 있나요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/fourqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="당신에게 가족이란 어떤 의미 인가요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton7"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/fiveqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="당신은 지금 행복한가요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton8"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/sixqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="당신이 가장 하고싶은 일은 무엇인가요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton9"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/sevenqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="살면서 가장 잘한 일은 무엇인가요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton10"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/eightqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="최근에 성취감을 느낀 것은 어떤 때였나요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton11"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/nineqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="요즘 당신의 가슴을 뛰게 하는 일이 있나요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton12"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/tenqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="올해안에 가장 도전해 보고 싶은 것 있나요?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton13"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_large" />
+
+                    <Button
+                        android:id="@+id/elevenqButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:text="오늘의 자신을 세단어로 표현해 본다면?"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

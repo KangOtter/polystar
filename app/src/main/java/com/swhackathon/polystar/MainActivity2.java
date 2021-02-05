@@ -15,6 +15,15 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        ImageButton home = (ImageButton) findViewById(R.id.homeButton);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
+                startActivity(intent);
+            }
+        });
         //별의 기억버튼
         ImageButton memory = (ImageButton) findViewById(R.id.memoryButton);
         memory.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +53,7 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //별자리 껏다 키는거
         ImageButton StarButton1=findViewById(R.id.StarButton1);
         StarButton1.setOnClickListener(new View.OnClickListener() {
             @Override

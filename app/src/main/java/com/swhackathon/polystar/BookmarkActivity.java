@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class BookmarkActivity extends AppCompatActivity {
@@ -89,6 +90,7 @@ public class BookmarkActivity extends AppCompatActivity {
         ImageButton imageButton11=findViewById(R.id.imageButton11);
         ImageButton imageButton12=findViewById(R.id.imageButton12);
         ImageButton imageButton13=findViewById(R.id.imageButton13);
+
         imageButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -200,6 +202,141 @@ public class BookmarkActivity extends AppCompatActivity {
             }
         });
         imageButton13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(10));
+                intent.putExtra("답","10번답");
+                startActivity(intent);
+            }
+        });
+
+
+        Button Button1 = findViewById(R.id.oneqButton);
+        Button Button2 = findViewById(R.id.twoqButton);
+        Button Button3 = findViewById(R.id.threeqButton);
+        Button Button4 = findViewById(R.id.fourqButton);
+        Button Button5 = findViewById(R.id.fiveqButton);
+        Button Button6 = findViewById(R.id.sixqButton);
+        Button Button7 = findViewById(R.id.sevenqButton);
+        Button Button8 = findViewById(R.id.eightqButton);
+        Button Button9 = findViewById(R.id.nineqButton);
+        Button Button10 = findViewById(R.id.tenqButton);
+        Button Button11= findViewById(R.id.elevenqButton);
+
+       Button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(0));
+                intent.putExtra("답","0번답");
+                startActivity(intent);
+            }
+        });
+        Button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(1));
+                intent.putExtra("답","1번답");
+                startActivity(intent);
+            }
+        });
+        Button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(2));
+                intent.putExtra("답","2번답");
+                startActivity(intent);
+            }
+        });
+        Button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(3));
+                intent.putExtra("답","3번답");
+                startActivity(intent);
+            }
+        });
+        Button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(4));
+                intent.putExtra("답","4번답");
+                startActivity(intent);
+            }
+        });
+        Button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(5));
+                intent.putExtra("답","5번답");
+                startActivity(intent);
+            }
+        });
+        Button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(6));
+                intent.putExtra("답","6번답");
+                startActivity(intent);
+            }
+        });
+        Button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(7));
+                intent.putExtra("답","7번답");
+                startActivity(intent);
+            }
+        });
+        Button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(8));
+                intent.putExtra("답","8번답");
+                startActivity(intent);
+            }
+        });
+        Button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+                //질문페이지로 연결
+                //인텐트 전달
+                intent.putExtra("질문",returnQuestion(9));
+                intent.putExtra("답","9번답");
+                startActivity(intent);
+            }
+        });
+        Button11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), InputActivity.class);

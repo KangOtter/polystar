@@ -48,7 +48,7 @@ public class InputActivity extends AppCompatActivity {
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
-        String s = "hello";
+        String s = "hello\n"; //s대신 질문을 넣을 것!!
 
 
         filename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
