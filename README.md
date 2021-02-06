@@ -1,5 +1,6 @@
 <img src="https://swhackathon.com//image/main.png"></img>
 ## <a href="https://swhackathon.com/Team/Info/41">프로젝트 <strong>Polaris</strong>:북극성</a>
+
 ![preview](./image/preview.png)
 
 ## 프로젝트 컨셉
@@ -41,8 +42,13 @@
 </dl>
 
 ## 프로젝트 개발환경
-  <a href="https://developer.android.com/studio"><img src=https://img.shields.io/badge/AndroidStudio-4.1.2-blue></img></a>  
-  <a href="https://developer.android.com/studio"><img src=https://img.shields.io/badge/Android-8.1-green/></img></a>  
+* 개발 툴<br>
+  <a href="https://developer.android.com/studio"><img src=https://img.shields.io/badge/AndroidStudio-4.1.2-blue></img></a>
+* 안드로이드 버전<br>
+   <a href="https://github.com/chaejina/polystar/edit/master/README.md"><img src=https://img.shields.io/badge/Android-8.1-green></img></a> 
+* 테스트 기종<br>
+   <a href="https://github.com/chaejina/polystar/edit/master/README.md"><img src=https://img.shields.io/badge/Pixel%202%20API%2027-Run-sucess></img></a>
+
 # 팀 구성원
   |역할|분야|학교|이름|
   |---|---|---|---|
