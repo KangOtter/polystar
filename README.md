@@ -68,29 +68,29 @@
         뒤로가기 선택시 MainActivity로<br>
         프로필 선택시 StraActivity로 이동합니다.<br>
         
-     * 홈: MainActivity<br>
+     * 홈: MainActivity  <br>
            내부순환중에도 MainActivity로 돌아옵니다.<br>
            뒤로가기 선택시 MainAtivity로 이동합니다.<br>
            
-     * 별의기억: CalanderActivity<br>
+     * 별의기억: CalanderActivity </img><br>
                 선택한 날짜에 답한 답변을 볼수있습니다.<br>
                 뒤로가기 선택시 MainAtivity로 이동합니다.<br>
                 프로필 선택시 StarActivity로 이동합니다.<br>
                 
-     * 별자리: StraActivity<br>
+     * 별자리: StraActivity </img><br>
                휙득한 별자리를 볼수있습니다.<br>
                프로필에서 사진을 변경할수 있습니다.<br>
                기존5개는 활성화상태 고정, 
                3개는 세부페이지 StarInfoActivity, StarInfoActivity2, StarInfoActivity3로 이동됩니다.<br>
                StarInfoActivity, StarInfoActivity2, StarInfoActivity3 에서 뒤로가기 선택시  StarActivity로 이동합니다.<br>
                                        
-     * 즐겨찾기: BookmarkActivity<br>
+     * 즐겨찾기: BookmarkActivity <br>
                 전체 질문중 한개를 선택하여 답변을 볼수있습니다.<br>
                 질분 선택시 답변페이지: OutputAcitvity로 이동합니다.
                 Output Activity에서 뒤로가기는 BookmarkActivity로 이동합니다.
                 답변연동 미구연<br>
                 
-     * 상단 달또는 별자리 아이콘: InputActivity
+     * 상단 달또는 별자리 아이콘: InputActivity로 이동합니다.<br>
                       선택시 질문이 나오고 답변을 입력합니다.<br>
                       완료를 선택시 답변이 저장됩니다.<br>
                       질문새로고침 선택시 질문이 변경됩니다.<br>
