@@ -86,8 +86,8 @@
                                        
      * 즐겨찾기: BookmarkActivity <br>
                 전체 질문중 한개를 선택하여 답변을 볼수있습니다.<br>
-                질분 선택시 답변페이지: OutputAcitvity로 이동합니다.
-                Output Activity에서 뒤로가기는 BookmarkActivity로 이동합니다.
+                질분 선택시 답변페이지: OutputAcitvity로 이동합니다.<br>
+                Output Activity에서 뒤로가기는 BookmarkActivity로 이동합니다.<br>
                 답변연동 미구연<br>
                 
      * 상단 달또는 별자리 아이콘: InputActivity로 이동합니다.<br>
