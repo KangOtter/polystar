@@ -45,9 +45,9 @@
 * 개발 툴<br>
   <a href="https://developer.android.com/studio"><img src=https://img.shields.io/badge/AndroidStudio-4.1.2-blue></img></a>
 * 안드로이드 버전<br>
-   <a href="https://github.com/chaejina/polystar/edit/master/README.md"><img src=https://img.shields.io/badge/Android-8.1-green></img></a> 
+   <a href="https://github.com/chaejina/polystar/edit/master"><img src=https://img.shields.io/badge/Android-8.1-green></img></a> 
 * 테스트 기종<br>
-   <a href="https://github.com/chaejina/polystar/edit/master/README.md"><img src=https://img.shields.io/badge/Pixel%202%20API%2027-Run-sucess></img></a>
+   <a href="https://github.com/chaejina/polystar/edit/master"><img src=https://img.shields.io/badge/Pixel%202%20API%2027-Run-sucess></img></a>
 
 # 팀 구성원
   |역할|분야|학교|이름|
