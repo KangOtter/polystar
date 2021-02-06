@@ -41,8 +41,8 @@
 </dl>
 
 ## 프로젝트 개발환경
-  <a href="https://developer.android.com/studio"><img src=https://img.shields.io/badge/AndroidStudio-4.1.2-blue/></a>  
-  <a href="https://developer.android.com/studio"><img src=https://img.shields.io/badge/Android-8.1-green/></a>  
+  <a href="https://developer.android.com/studio"><img src=https://img.shields.io/badge/AndroidStudio-4.1.2-blue></img></a>  
+  <a href="https://developer.android.com/studio"><img src=https://img.shields.io/badge/Android-8.1-green/></img></a>  
 # 팀 구성원
   |역할|분야|학교|이름|
   |---|---|---|---|
