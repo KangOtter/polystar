@@ -3,6 +3,9 @@
 
 ![preview](./image/preview.png)
 
+## 데모영상
+[![AppDemo](https://img.youtube.com/vi/f-8SmoucINY/maxresdefault.jpg)](https://youtu.be/f-8SmoucINY)
+
 ## 프로젝트 컨셉
 <p align="center">
   우리에게 가장 친숙한 별, <strong>북극성</strong><br>
