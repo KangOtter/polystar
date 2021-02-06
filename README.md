@@ -53,50 +53,49 @@
    <a href="https://github.com/chaejina/polystar"><img src=https://img.shields.io/badge/Pixel%202%20API%2027-Run-sucess></img></a>
 
 ## 프로젝트 Activity 흐름도
-  * 로그인 안되어있을시<br>
-    IntroActivity ->  JoinActivity -> Guide Acitivity (3개) -> MainActivity & 내부순환<br>
+  * 로그인 안되어있을 시<br>
+    + IntroActivity ->  JoinActivity -> Guide Acitivity (3개) -> MainActivity & 내부순환<br><br>
   
-  * 로그인이 되어있을시<br>
-    IntroActivity ->  MainActivity & 내부순환<br>
+  * 로그인이 되어있을 시<br>
+    + IntroActivity ->  MainActivity & 내부순환<br><br>
   
   * Guide Activity (3개)<br>
-    StarQuestionActivity2 -> StarQuestionActivity3 -> StarQuestionActivity4<br>
+    + StarQuestionActivity2 -> StarQuestionActivity3 -> StarQuestionActivity4<br><br>
   
   * MainActivity & 내부순환: 홈버튼을 누르면 아래의 순서대로 화면이 전환됩니다.<br>
-    MainActivity -> MainActivity2 -> MainActivity3 -> MainActivity4 -> MainActivity5 ->  MainActivity -><br>
+    + MainActivity -> MainActivity2 -> MainActivity3 -> MainActivity4 -> MainActivity5 ->  MainActivity -><br>
             ↓<br>
-     APP 하단 네비게이션바: 홈, 별의기억, 별자리, 즐겨찾기<br>
-     * 공통사항<br>
-        별의기억, 별자리, 즐겨찾기에서<br>
-        뒤로가기 선택시 MainActivity로<br>
-        프로필 선택시 StraActivity로 이동합니다.<br>
+    + APP 하단 네비게이션바: 홈, 별의기억, 별자리, 즐겨찾기<br>
+
+
+     + 공통사항<br>
+          - 별의기억, 별자리, 즐겨찾기에서 뒤로가기 선택 시 MainActivity로, 프로필 선택 시 StraActivity로 이동합니다.<br>
         
-     * 홈: MainActivity  <br>
-           내부순환중에도 MainActivity로 돌아옵니다.<br>
-           뒤로가기 선택시 MainAtivity로 이동합니다.<br>
+     + 홈: MainActivity  <br>
+          - 내부순환 중에도 MainActivity로 돌아옵니다.<br>
+          - 뒤로가기 선택 시 MainAtivity로 이동합니다.<br>
            
-     * 별의기억: CalanderActivity </img><br>
-                선택한 날짜에 답한 답변을 볼수있습니다.<br>
-                뒤로가기 선택시 MainAtivity로 이동합니다.<br>
-                프로필 선택시 StarActivity로 이동합니다.<br>
+     + 별의기억: CalanderActivity </img><br>
+          - 선택한 날짜에 답한 답변을 볼 수 있습니다.<br>
+          - 뒤로가기 선택 시 MainAtivity로 이동합니다.<br>
+          - 프로필 선택 시 StarActivity로 이동합니다.<br>
                 
-     * 별자리: StraActivity </img><br>
-               휙득한 별자리를 볼수있습니다.<br>
-               프로필에서 사진을 변경할수 있습니다.<br>
-               기존5개는 활성화상태 고정, 
-               3개는 세부페이지 StarInfoActivity, StarInfoActivity2, StarInfoActivity3로 이동됩니다.<br>
-               StarInfoActivity, StarInfoActivity2, StarInfoActivity3 에서 뒤로가기 선택시  StarActivity로 이동합니다.<br>
+     + 별자리: StraActivity </img><br>
+          - 획득한 별자리를 볼 수 있습니다.<br>
+          - 프로필에서 사진을 변경할 수 있습니다.<br>
+          - 기존 5개는 활성화상태로 고정, 그 중 3개는 세부페이지 StarInfoActivity, StarInfoActivity2, StarInfoActivity3로 이동됩니다.<br>
+          - StarInfoActivity, StarInfoActivity2, StarInfoActivity3 에서 뒤로가기 선택시  StarActivity로 이동합니다.<br>
                                        
-     * 즐겨찾기: BookmarkActivity <br>
-                전체 질문중 한개를 선택하여 답변을 볼수있습니다.<br>
-                질분 선택시 답변페이지: OutputAcitvity로 이동합니다.<br>
-                Output Activity에서 뒤로가기는 BookmarkActivity로 이동합니다.<br>
-                답변연동 미구연<br>
+     + 즐겨찾기: BookmarkActivity <br>
+          - 전체 질문 중 1개를 선택하여 답변을 볼 수 있습니다.<br>
+          - 질문 선택 시 답변 페이지: OutputAcitvity로 이동합니다.<br>
+          - Output Activity에서 뒤로가기는 BookmarkActivity로 이동합니다.<br>
+          - 답변 연동 미구현<br>
                 
-     * 상단 달또는 별자리 아이콘: InputActivity로 이동합니다.<br>
-                      선택시 질문이 나오고 답변을 입력합니다.<br>
-                      완료를 선택시 답변이 저장됩니다.<br>
-                      질문새로고침 선택시 질문이 변경됩니다.<br>
+     + 상단 달 또는 별자리 아이콘: InputActivity로 이동합니다.<br>
+          - 선택 시 질문이 나오고 답변을 입력합니다.<br>
+          - 완료를 선택 시 답변이 저장됩니다.<br>
+          - 질문 새로고침 선택 시 질문이 변경됩니다.<br>
                 
 # 팀 구성원
   |역할|분야|학교|이름|
