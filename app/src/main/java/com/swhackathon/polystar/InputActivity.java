@@ -25,9 +25,8 @@ public class InputActivity extends AppCompatActivity {
     String filename;
     EditText result;
     ImageButton checkButton;
-    int questionCount=0;
     Calendar cal;
-    String String;
+    int questionCount=1;
     String[] Strings = {"좋아하는 물건과 그 이유는 무엇인가요?", "오늘 하지 못했던 말이 있나요?",
             "당신에게 성공이란 어떤 것인가요?", "당신에게 가족이란 어떤 의미인가요?",
             "당신은 지금 행복한가요?","살면서 가장 잘한 일은 무엇인가요?",
@@ -40,35 +39,51 @@ public class InputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
-        //몇번째 질문인지 확인하는 변수
         checkButton = findViewById(R.id.checkButton);
         result = findViewById(R.id.resultTxt);
         cal = Calendar.getInstance();
+
+        //답변파일 생성 변수
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
-        String s = BookmarkActivity.returnQuestion(questionCount)+"\n"; //s대신 질문을 넣을 것!!
 
         filename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
-        String str = readDiary(filename);
-        result.setText(str);
+        String s = BookmarkActivity.returnQuestion(1)+"\n"; //s대신 질문을 넣을 것!!
+        String str = "abc";
+
+        while(str != null && questionCount < 4)
+        {
+            filename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
+            str = readDiary(filename);
+            result.setText(str);
+            questionCount = questionCount + 1;
+        }
+
 
 
         //완료버튼 누를 시 파일에 입력값 입력
         checkButton.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    FileOutputStream outFs = openFileOutput(filename, Context.MODE_PRIVATE);
-                    String str = result.getText().toString();
-                    outFs.write(s.getBytes());
-                    outFs.write(str.getBytes());
-                    outFs.close();
-                    Toast.makeText(InputActivity.this, filename + "이 저장", Toast.LENGTH_SHORT).show();
-                    questionCount = questionCount + 1;
-                } catch (IOException e) {
-                    e.printStackTrace();
+                if(questionCount < 4)
+                {
+                    try {
+                        FileOutputStream outFs = openFileOutput(filename, Context.MODE_PRIVATE);
+                        String str = result.getText().toString();
+                        outFs.write(str.getBytes());
+                        outFs.close();
+                        Toast.makeText(InputActivity.this, filename + "이 저장", Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
+                else{
+                    Toast.makeText(getApplicationContext(), String.format("더이상 답변을 입력 할 수 없습니다..."), Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -170,7 +185,6 @@ public class InputActivity extends AppCompatActivity {
 
         }catch (IOException e){
             result.setHint("답을 입력해 주세요");
-            diaryStr="";
         }
         return diaryStr;
     }

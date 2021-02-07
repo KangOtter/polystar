@@ -127,7 +127,7 @@ public class CalanderActivity extends AppCompatActivity {
             inFs.close();
             diaryStr = (new String(txt)).trim();
         }catch (IOException e){
-            answer.setHint("질문 없음");
+            answer.setHint("답변 없음");
         }
 
         return diaryStr;
