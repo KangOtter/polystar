@@ -22,6 +22,7 @@ public class OutputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -32,6 +33,7 @@ public class OutputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CalanderActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -42,6 +44,7 @@ public class OutputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -52,6 +55,7 @@ public class OutputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), BookmarkActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -62,6 +66,7 @@ public class OutputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), BookmarkActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -72,10 +77,11 @@ public class OutputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
-        Intent intent= getIntent();
-        if(intent.hasExtra("질문")) {
+        Intent intent = getIntent();
+        if (intent.hasExtra("질문")) {
             String qmsg = intent.getStringExtra("질문");
             String amsg = intent.getStringExtra("답");
             TextView qtextView = (TextView) findViewById(R.id.questionTxt);

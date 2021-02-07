@@ -1,4 +1,5 @@
 package com.swhackathon.polystar;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +25,8 @@ public class StarActivity extends AppCompatActivity {
     String loginName, loginId;
     ImageButton imageEdit;
     ImageView imageProfile;
-    boolean[] light={false,false,false,false,false,false,false};
+    boolean[] light = {false, false, false, false, false, false, false};
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,7 @@ public class StarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -47,6 +50,7 @@ public class StarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CalanderActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -56,7 +60,7 @@ public class StarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarActivity.class);
-                startActivity(intent);
+                startActivity(intent);finish();
             }
         });*/
 
@@ -67,6 +71,7 @@ public class StarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), BookmarkActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -77,21 +82,22 @@ public class StarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
-        ImageButton b1=(ImageButton)findViewById(R.id.b1Button);
-        ImageButton b2=(ImageButton)findViewById(R.id.b2Button);
-        ImageButton b3=(ImageButton)findViewById(R.id.b3Button);
-        ImageButton b4=(ImageButton)findViewById(R.id.b4Button);
-        ImageButton b5=(ImageButton)findViewById(R.id.b5Button);
-        ImageButton b6=(ImageButton)findViewById(R.id.b6Button);
-        ImageButton b7=(ImageButton)findViewById(R.id.b7Button);
+        ImageButton b1 = (ImageButton) findViewById(R.id.b1Button);
+        ImageButton b2 = (ImageButton) findViewById(R.id.b2Button);
+        ImageButton b3 = (ImageButton) findViewById(R.id.b3Button);
+        ImageButton b4 = (ImageButton) findViewById(R.id.b4Button);
+        ImageButton b5 = (ImageButton) findViewById(R.id.b5Button);
+        ImageButton b6 = (ImageButton) findViewById(R.id.b6Button);
+        ImageButton b7 = (ImageButton) findViewById(R.id.b7Button);
         //ImageButton b8=(ImageButton)findViewById(R.id.b8Button);
-        ImageButton b9=(ImageButton)findViewById(R.id.b9Button);
+        ImageButton b9 = (ImageButton) findViewById(R.id.b9Button);
         //ImageButton b10=(ImageButton)findViewById(R.id.b10Button);
-        ImageButton b11=(ImageButton)findViewById(R.id.b11Button);
-        ImageButton b12=(ImageButton)findViewById(R.id.b12Button);
+        ImageButton b11 = (ImageButton) findViewById(R.id.b11Button);
+        ImageButton b12 = (ImageButton) findViewById(R.id.b12Button);
         /*
             활성화 되어있는 5개
         * */
@@ -100,6 +106,7 @@ public class StarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarInfoActivity2.class);
                 startActivity(intent);
+                finish();
             }
         });
         b7.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +114,7 @@ public class StarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarInfoActivity3.class);
                 startActivity(intent);
+                finish();
             }
         });
         b11.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +122,7 @@ public class StarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarInfoActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         /*
@@ -122,91 +131,84 @@ public class StarActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!light[0]){
+                if (!light[0]) {
                     b1.setImageResource(R.drawable.ba1);
-                    light[0]=true;
-                }
-                else{
+                    light[0] = true;
+                } else {
                     b1.setImageResource(R.drawable.b1);
-                    light[0]=false;
+                    light[0] = false;
                 }
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!light[1]){
+                if (!light[1]) {
                     b2.setImageResource(R.drawable.ba2);
-                    light[1]=true;
-                }
-                else{
+                    light[1] = true;
+                } else {
                     b2.setImageResource(R.drawable.b2);
-                    light[1]=false;
+                    light[1] = false;
                 }
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!light[2]){
+                if (!light[2]) {
                     b4.setImageResource(R.drawable.ba4);
-                    light[2]=true;
-                }
-                else{
+                    light[2] = true;
+                } else {
                     b4.setImageResource(R.drawable.b4);
-                    light[2]=false;
+                    light[2] = false;
                 }
             }
         });
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!light[3]){
+                if (!light[3]) {
                     b5.setImageResource(R.drawable.ba5);
-                    light[3]=true;
-                }
-                else{
+                    light[3] = true;
+                } else {
                     b5.setImageResource(R.drawable.b5);
-                    light[3]=false;
+                    light[3] = false;
                 }
             }
         });
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!light[4]){
+                if (!light[4]) {
                     b6.setImageResource(R.drawable.ba6);
-                    light[4]=true;
-                }
-                else{
+                    light[4] = true;
+                } else {
                     b6.setImageResource(R.drawable.b6);
-                    light[4]=false;
+                    light[4] = false;
                 }
             }
         });
         b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!light[5]){
+                if (!light[5]) {
                     b9.setImageResource(R.drawable.ba9);
-                    light[5]=true;
-                }
-                else{
+                    light[5] = true;
+                } else {
                     b9.setImageResource(R.drawable.b9);
-                    light[5]=false;
+                    light[5] = false;
                 }
             }
         });
         b12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!light[6]){
+                if (!light[6]) {
                     b12.setImageResource(R.drawable.ba12);
-                    light[6]=true;
-                }
-                else{
+                    light[6] = true;
+                } else {
                     b12.setImageResource(R.drawable.b12);
-                    light[6]=false;
+                    light[6] = false;
                 }
             }
         });

@@ -21,6 +21,7 @@ public class StarInfoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -31,6 +32,7 @@ public class StarInfoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CalanderActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -41,6 +43,7 @@ public class StarInfoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -51,6 +54,7 @@ public class StarInfoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), BookmarkActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -61,6 +65,7 @@ public class StarInfoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

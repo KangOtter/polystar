@@ -68,10 +68,9 @@ public class InputActivity extends AppCompatActivity {
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
         Afilename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
-        //String s = BookmarkActivity.returnQuestion(1)+"\n"; //s대신 질문을 넣을 것!!
         String str = "abc";
 
-        while(str != null && questionCount < 5)
+        while(str != null && questionCount < 3)
         {
             questionCount = questionCount + 1;
             Afilename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount) +"_" + "A";
@@ -99,7 +98,6 @@ public class InputActivity extends AppCompatActivity {
                         outFs.close();
 
                         Toast.makeText(InputActivity.this, Afilename + "이 저장", Toast.LENGTH_SHORT).show();
-                        Toast.makeText(InputActivity.this, Qfilename + "이 저장", Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -110,6 +108,7 @@ public class InputActivity extends AppCompatActivity {
                 }
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -142,6 +141,7 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -152,6 +152,7 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CalanderActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -162,6 +163,7 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -172,6 +174,7 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), BookmarkActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -182,6 +185,7 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -192,6 +196,7 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

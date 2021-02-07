@@ -96,6 +96,7 @@ public class CalanderActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -105,7 +106,7 @@ public class CalanderActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CalanderActivity.class);
-                startActivity(intent);
+                startActivity(intent);finish();
             }
         });*/
 
@@ -116,6 +117,7 @@ public class CalanderActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -126,6 +128,7 @@ public class CalanderActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), BookmarkActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -136,13 +139,14 @@ public class CalanderActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
     }
 
     // 답변 파일 읽기 함수
-    String readAnswer(String filename){
+    String readAnswer(String filename) {
 
         String diaryStr = null;
         FileInputStream inFs;
@@ -153,7 +157,7 @@ public class CalanderActivity extends AppCompatActivity {
             inFs.read(txt);
             inFs.close();
             diaryStr = (new String(txt)).trim();
-        }catch (IOException e){
+        } catch (IOException e) {
             answer.setHint("");
         }
 
@@ -161,7 +165,7 @@ public class CalanderActivity extends AppCompatActivity {
     }
 
     //질문 파일 읽기 함수
-    String readQuestion(String filename){
+    String readQuestion(String filename) {
 
         String diaryStr = null;
         FileInputStream inFs;
@@ -172,14 +176,14 @@ public class CalanderActivity extends AppCompatActivity {
             inFs.read(txt);
             inFs.close();
             diaryStr = (new String(txt)).trim();
-        }catch (IOException e){
+        } catch (IOException e) {
             question.setHint("");
         }
 
         return diaryStr;
     }
 
-    String readQuestion1(String filename){
+    String readQuestion1(String filename) {
 
         String diaryStr = null;
         FileInputStream inFs;
@@ -190,7 +194,7 @@ public class CalanderActivity extends AppCompatActivity {
             inFs.read(txt);
             inFs.close();
             diaryStr = (new String(txt)).trim();
-        }catch (IOException e){
+        } catch (IOException e) {
             question.setHint("이 날은 받은 질문이 없습니다.");
         }
 

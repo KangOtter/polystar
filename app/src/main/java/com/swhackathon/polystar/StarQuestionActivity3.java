@@ -19,6 +19,7 @@ public class StarQuestionActivity3 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarQuestionActivity4.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

@@ -103,4 +103,5 @@ public class JoinActivity extends AppCompatActivity {
             } //end if
         } //end if
     } //end onActivityResult
+
 } //end class

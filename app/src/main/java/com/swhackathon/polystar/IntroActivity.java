@@ -13,18 +13,19 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        ImageButton imageButton = (ImageButton)findViewById(R.id.imageButton);
+        ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
                 startActivity(intent);
+                finish();
             } //end onClick
         });
 
     } //end onCreate
 
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         finish();
     } //end onPause

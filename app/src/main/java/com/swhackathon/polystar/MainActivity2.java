@@ -9,8 +9,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity2 extends AppCompatActivity {
-    boolean[] starLine={false,false,false,false,false};
-    boolean allstar=false;
+    boolean[] starLine = {false, false, false, false, false};
+    boolean allstar = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
                 startActivity(intent);
+                finish();
             }
         });
         //별의 기억버튼
@@ -32,7 +34,6 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CalanderActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -56,99 +57,94 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
         //별자리 껏다 키는거
-        ImageButton StarButton1=findViewById(R.id.StarButton1);
+        ImageButton StarButton1 = findViewById(R.id.StarButton1);
         StarButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageView star1=findViewById(R.id.starLine1);
-                if(!starLine[0]){
+                ImageView star1 = findViewById(R.id.starLine1);
+                if (!starLine[0]) {
                     star1.setImageResource(R.drawable.sl1);
-                    starLine[0]=true;
-                }
-                else{
+                    starLine[0] = true;
+                } else {
                     star1.setImageResource(0);
-                    starLine[0]=false;
+                    starLine[0] = false;
                 }
             }
         });
 
         //별자리 나타내고 사라지게 하는 버튼
-        ImageButton StarButton2=findViewById(R.id.StarButton2);
+        ImageButton StarButton2 = findViewById(R.id.StarButton2);
         StarButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageView star1=findViewById(R.id.starLine2);
-                if(!starLine[1]){
+                ImageView star1 = findViewById(R.id.starLine2);
+                if (!starLine[1]) {
                     star1.setImageResource(R.drawable.sl2);
-                    starLine[1]=true;
-                }
-                else{
+                    starLine[1] = true;
+                } else {
                     star1.setImageResource(0);
-                    starLine[1]=false;
+                    starLine[1] = false;
                 }
             }
         });
-        ImageButton StarButton3=findViewById(R.id.StarButton3);
+        ImageButton StarButton3 = findViewById(R.id.StarButton3);
         StarButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageView star1=findViewById(R.id.starLine3);
-                if(!starLine[2]){
+                ImageView star1 = findViewById(R.id.starLine3);
+                if (!starLine[2]) {
                     star1.setImageResource(R.drawable.sl3);
-                    starLine[2]=true;
-                }
-                else{
+                    starLine[2] = true;
+                } else {
                     star1.setImageResource(0);
-                    starLine[2]=false;
+                    starLine[2] = false;
                 }
             }
         });
-        ImageButton StarButton4=findViewById(R.id.StarButton4);
+        ImageButton StarButton4 = findViewById(R.id.StarButton4);
         StarButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageView star1=findViewById(R.id.starLine4);
-                if(!starLine[3]){
+                ImageView star1 = findViewById(R.id.starLine4);
+                if (!starLine[3]) {
                     star1.setImageResource(R.drawable.sl4);
-                    starLine[3]=true;
-                }
-                else{
+                    starLine[3] = true;
+                } else {
                     star1.setImageResource(0);
-                    starLine[3]=false;
+                    starLine[3] = false;
                 }
             }
         });
-        ImageButton StarButton5=findViewById(R.id.StarButton5);
+        ImageButton StarButton5 = findViewById(R.id.StarButton5);
         StarButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageView star1=findViewById(R.id.starLine5);
-                if(!starLine[4]){
+                ImageView star1 = findViewById(R.id.starLine5);
+                if (!starLine[4]) {
                     star1.setImageResource(R.drawable.sl5);
-                    starLine[4]=true;
-                }
-                else{
+                    starLine[4] = true;
+                } else {
                     star1.setImageResource(0);
-                    starLine[4]=false;
+                    starLine[4] = false;
                 }
             }
         });
 
         //쓰레기통 버튼 구현
-        ImageButton trashcan=findViewById(R.id.trashcan);
+        ImageButton trashcan = findViewById(R.id.trashcan);
         trashcan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageView star1=findViewById(R.id.starLine1);
-                ImageView star2=findViewById(R.id.starLine2);
-                ImageView star3=findViewById(R.id.starLine3);
-                ImageView star4=findViewById(R.id.starLine4);
-                ImageView star5=findViewById(R.id.starLine5);
-                starLine[0]=false;
-                starLine[1]=false;
-                starLine[2]=false;
-                starLine[3]=false;
-                starLine[4]=false;
+                ImageView star1 = findViewById(R.id.starLine1);
+                ImageView star2 = findViewById(R.id.starLine2);
+                ImageView star3 = findViewById(R.id.starLine3);
+                ImageView star4 = findViewById(R.id.starLine4);
+                ImageView star5 = findViewById(R.id.starLine5);
+                starLine[0] = false;
+                starLine[1] = false;
+                starLine[2] = false;
+                starLine[3] = false;
+                starLine[4] = false;
                 star1.setImageResource(0);
                 star2.setImageResource(0);
                 star3.setImageResource(0);
