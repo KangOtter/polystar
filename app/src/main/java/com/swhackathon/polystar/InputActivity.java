@@ -28,8 +28,6 @@ public class InputActivity extends AppCompatActivity {
 
     String Afilename;
     String Qfilename;
-    EditText result;
-    ImageButton checkButton;
     Calendar cal;
     int questionCount=0;
 
@@ -46,8 +44,8 @@ public class InputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
-        checkButton = findViewById(R.id.checkButton);
-        result = findViewById(R.id.resultTxt);
+        EditText result = findViewById(R.id.resultTxt);
+
         cal = Calendar.getInstance();
 
         //질문 파일 생성
@@ -58,8 +56,8 @@ public class InputActivity extends AppCompatActivity {
 
         //첫번째 질문 출력
         r = (int)(Math.random()*howmanyquestion);
-        TextView questionTxt = findViewById(R.id.questionTxt);
-        questionTxt.setText(Question[r]);
+        TextView questionTxtsee = findViewById(R.id.questionTxt);
+        questionTxtsee.setText(Question[r]);
 
 
         //답변파일 생성 변수
@@ -67,7 +65,7 @@ public class InputActivity extends AppCompatActivity {
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
-        Afilename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
+        //Afilename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
         String str = "abc";
 
         while(str != null && questionCount < 3)
@@ -79,9 +77,11 @@ public class InputActivity extends AppCompatActivity {
             result.setText(str);
         }
 
-
+        result.setText("");
+        result.setHint("답을 입력해 주세요");
 
         //완료버튼 누를 시 파일에 입력값 입력
+        ImageButton checkButton = (ImageButton) findViewById(R.id.checkButton);
         checkButton.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,12 +118,12 @@ public class InputActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                TextView questionTxt = findViewById(R.id.questionTxt);   //질문란
+                TextView questionTxtsee = findViewById(R.id.questionTxt);   //질문란
                 EditText resultTxt = findViewById(R.id.resultTxt);   //대답란
 
                 //질문 새로고침
                 r = (int)(Math.random()*howmanyquestion);
-                questionTxt.setText(Question[r]);
+                questionTxtsee.setText(Question[r]);
 
                 // 대답 새로고침... 이전 대답 날리기
                 resultTxt.setText("");
@@ -222,6 +222,7 @@ public class InputActivity extends AppCompatActivity {
 
     //저장되어있는 답변을 읽어오는 함수
     private String readDiary(String filename) {
+        EditText result = findViewById(R.id.resultTxt);
         String diaryStr = null;
         FileInputStream inFs;
         try {
