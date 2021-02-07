@@ -16,6 +16,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        //홈버튼
         ImageButton home = (ImageButton) findViewById(R.id.homeButton);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +71,8 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             }
         });
+
+        //별자리 나타내고 사라지게 하는 버튼
         ImageButton StarButton2=findViewById(R.id.StarButton2);
         StarButton2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,6 +133,8 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             }
         });
+
+        //쓰레기통 버튼 구현
         ImageButton trashcan=findViewById(R.id.trashcan);
         trashcan.setOnClickListener(new View.OnClickListener() {
             @Override

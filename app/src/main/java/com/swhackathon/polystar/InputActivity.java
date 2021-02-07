@@ -26,13 +26,17 @@ import java.util.StringTokenizer;
 
 public class InputActivity extends AppCompatActivity {
 
-    String filename;
+    String Afilename;
+    String Qfilename;
     EditText result;
     ImageButton checkButton;
     Calendar cal;
     int questionCount=0;
+
+    //질문을 위한 변수들
     String[] Question;
     String questionTxt;
+    int r = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,8 +52,9 @@ public class InputActivity extends AppCompatActivity {
         StringTokenizer tokens = new StringTokenizer(questionTxt);
         Question = questionTxt.split("\n");
 
+        //첫번째 질문 출력
         TextView questionTxt = findViewById(R.id.questionTxt);
-        questionTxt.setText(Question[1]);
+        questionTxt.setText(Question[r]);
 
 
         //답변파일 생성 변수
@@ -57,15 +62,16 @@ public class InputActivity extends AppCompatActivity {
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
-        filename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
-        String s = BookmarkActivity.returnQuestion(1)+"\n"; //s대신 질문을 넣을 것!!
+        Afilename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
+        //String s = BookmarkActivity.returnQuestion(1)+"\n"; //s대신 질문을 넣을 것!!
         String str = "abc";
 
         while(str != null && questionCount < 5)
         {
             questionCount = questionCount + 1;
-            filename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount);
-            str = readDiary(filename);
+            Afilename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount) +"_" + "A";
+            Qfilename = Integer.toString(year) + "_" + Integer.toString(month) + "_" + Integer.toString(day) + "_" + Integer.toString(questionCount) +"_" + "Q";
+            str = readDiary(Afilename);
             result.setText(str);
         }
 
@@ -78,11 +84,17 @@ public class InputActivity extends AppCompatActivity {
                 if(questionCount < 4)
                 {
                     try {
-                        FileOutputStream outFs = openFileOutput(filename, Context.MODE_PRIVATE);
+                        FileOutputStream outFs = openFileOutput(Afilename, Context.MODE_PRIVATE);
                         String str = result.getText().toString();
                         outFs.write(str.getBytes());
                         outFs.close();
-                        Toast.makeText(InputActivity.this, filename + "이 저장", Toast.LENGTH_SHORT).show();
+
+                        outFs = openFileOutput(Qfilename, Context.MODE_PRIVATE);
+                        outFs.write(Question[r].getBytes());
+                        outFs.close();
+
+                        Toast.makeText(InputActivity.this, Afilename + "이 저장", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(InputActivity.this, Qfilename + "이 저장", Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -93,6 +105,28 @@ public class InputActivity extends AppCompatActivity {
                 }
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        //질문 새로고침
+
+        Random random = new Random();
+
+        ImageButton reButton = (ImageButton) findViewById(R.id.reButton);
+        reButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                TextView questionTxt = findViewById(R.id.questionTxt);   //질문란
+                EditText resultTxt = findViewById(R.id.resultTxt);   //대답란
+
+                //질문 새로고침
+                r = (int)(Math.random()*12);
+                questionTxt.setText(Question[r]);
+
+                // 대답 새로고침... 이전 대답 날리기
+                resultTxt.setText("");
+                resultTxt.setHint("답을 입력해 주세요");
             }
         });
 
@@ -156,26 +190,6 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StarActivity.class);
                 startActivity(intent);
-            }
-        });
-
-
-
-        Random random = new Random();
-
-        // 질문 새로고침
-        ImageButton reButton = (ImageButton) findViewById(R.id.reButton);
-        reButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                TextView questionTxt = findViewById(R.id.questionTxt);   //질문란
-                EditText resultTxt = findViewById(R.id.resultTxt);   //대답란
-
-                int r = (int)(Math.random()*12);
-                questionTxt.setText(Question[r]);
-                // 질문 새로고침 db 저장 작성
-                resultTxt.setText("");
             }
         });
     }

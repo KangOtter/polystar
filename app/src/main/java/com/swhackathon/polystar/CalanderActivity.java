@@ -17,8 +17,10 @@ public class CalanderActivity extends AppCompatActivity {
 
     //파일을 불러오기위한 변수들
     DatePicker datePicker;
-    String filename;
+    String Afilename;
+    String Qfilename;
     TextView answer;
+    TextView question;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,19 +45,37 @@ public class CalanderActivity extends AppCompatActivity {
             @Override
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
 
-                answer = findViewById(R.id.question1);
-                filename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 1;
-                String str1 = readDiary(filename);
+                //질문 출력
+                question = findViewById(R.id.question1);
+                Qfilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 1 + "_" + "Q";
+                String que1 = readQuestion(Qfilename);
+                question.setText(que1);
+
+                question = findViewById(R.id.question2);
+                Qfilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 2 + "_" + "Q";
+                String que2 = readQuestion(Qfilename);
+                question.setText(que2);
+
+                question = findViewById(R.id.question3);
+                Qfilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 3 + "_" + "Q";
+                String que3 = readQuestion(Qfilename);
+                question.setText(que3);
+
+
+                //대답 출력
+                answer = findViewById(R.id.answer1);
+                Afilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 1 + "_" + "A";
+                String str1 = readAnswer(Afilename);
                 answer.setText(str1);
 
-                answer = findViewById(R.id.question2);
-                filename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 2;
-                String str2 = readDiary(filename);
+                answer = findViewById(R.id.answer2);
+                Afilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 2 + "_" + "A";
+                String str2 = readAnswer(Afilename);
                 answer.setText(str2);
 
-                answer = findViewById(R.id.question3);
-                filename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 3;
-                String str3 = readDiary(filename);
+                answer = findViewById(R.id.answer3);
+                Afilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 3 + "_" + "A";
+                String str3 = readAnswer(Afilename);
                 answer.setText(str3);
             }
         });
@@ -114,20 +134,39 @@ public class CalanderActivity extends AppCompatActivity {
 
     }
 
-    // 파일 읽기 함수
-    String readDiary(String filename){
+    // 답변 파일 읽기 함수
+    String readAnswer(String filename){
 
         String diaryStr = null;
         FileInputStream inFs;
         try {
             inFs = openFileInput(filename);
 
-            byte[] txt = new byte[500];
+            byte[] txt = new byte[1000];
             inFs.read(txt);
             inFs.close();
             diaryStr = (new String(txt)).trim();
         }catch (IOException e){
             answer.setHint("답변 없음");
+        }
+
+        return diaryStr;
+    }
+
+    //질문 파일 읽기 함수
+    String readQuestion(String filename){
+
+        String diaryStr = null;
+        FileInputStream inFs;
+        try {
+            inFs = openFileInput(filename);
+
+            byte[] txt = new byte[1000];
+            inFs.read(txt);
+            inFs.close();
+            diaryStr = (new String(txt)).trim();
+        }catch (IOException e){
+            question.setHint("질문 없음");
         }
 
         return diaryStr;
