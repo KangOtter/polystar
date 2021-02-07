@@ -36,7 +36,10 @@ public class InputActivity extends AppCompatActivity {
     //질문을 위한 변수들
     String[] Question;
     String questionTxt;
+    //몇번째 질문인지 확인 변수
     int r = 0;
+    //총 질문 개수 확인 변수
+    int howmanyquestion;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,8 +54,10 @@ public class InputActivity extends AppCompatActivity {
         questionTxt = readTxt();
         StringTokenizer tokens = new StringTokenizer(questionTxt);
         Question = questionTxt.split("\n");
+        howmanyquestion = Question.length;
 
         //첫번째 질문 출력
+        r = (int)(Math.random()*howmanyquestion);
         TextView questionTxt = findViewById(R.id.questionTxt);
         questionTxt.setText(Question[r]);
 
@@ -109,9 +114,6 @@ public class InputActivity extends AppCompatActivity {
         });
 
         //질문 새로고침
-
-        Random random = new Random();
-
         ImageButton reButton = (ImageButton) findViewById(R.id.reButton);
         reButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,7 +123,7 @@ public class InputActivity extends AppCompatActivity {
                 EditText resultTxt = findViewById(R.id.resultTxt);   //대답란
 
                 //질문 새로고침
-                r = (int)(Math.random()*12);
+                r = (int)(Math.random()*howmanyquestion);
                 questionTxt.setText(Question[r]);
 
                 // 대답 새로고침... 이전 대답 날리기
