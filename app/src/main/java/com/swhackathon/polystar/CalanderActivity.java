@@ -32,6 +32,7 @@ public class CalanderActivity extends AppCompatActivity {
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
+        int ck = 0;
 
         datePicker = findViewById(R.id.datepicker);
 
@@ -40,24 +41,30 @@ public class CalanderActivity extends AppCompatActivity {
         datePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
 
             // datepicker에서 날짜가 바뀔때마다 파일이름을 정해준다
-            // readDiary메소드를 통해 파일이 존재하면 파일의 내용을 가져오고
+            // readAnswer과 readQuestion메소드를 통해 파일이 존재하면 파일의 내용을 가져오고
             // 그렇지 않다면 null을 가져온다.
             @Override
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
 
+                int ck = 1;
+
                 //질문 출력
                 question = findViewById(R.id.question1);
-                Qfilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 1 + "_" + "Q";
-                String que1 = readQuestion(Qfilename);
+                Qfilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + ck + "_" + "Q";
+                String que1 = readQuestion1(Qfilename);
                 question.setText(que1);
 
+                ck = ck + 1;
+
                 question = findViewById(R.id.question2);
-                Qfilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 2 + "_" + "Q";
+                Qfilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + ck + "_" + "Q";
                 String que2 = readQuestion(Qfilename);
                 question.setText(que2);
 
+                ck = ck + 1;
+
                 question = findViewById(R.id.question3);
-                Qfilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 3 + "_" + "Q";
+                Qfilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + ck + "_" + "Q";
                 String que3 = readQuestion(Qfilename);
                 question.setText(que3);
 
@@ -147,7 +154,7 @@ public class CalanderActivity extends AppCompatActivity {
             inFs.close();
             diaryStr = (new String(txt)).trim();
         }catch (IOException e){
-            answer.setHint("답변 없음");
+            answer.setHint("");
         }
 
         return diaryStr;
@@ -166,11 +173,30 @@ public class CalanderActivity extends AppCompatActivity {
             inFs.close();
             diaryStr = (new String(txt)).trim();
         }catch (IOException e){
-            question.setHint("질문 없음");
+            question.setHint("");
         }
 
         return diaryStr;
     }
+
+    String readQuestion1(String filename){
+
+        String diaryStr = null;
+        FileInputStream inFs;
+        try {
+            inFs = openFileInput(filename);
+
+            byte[] txt = new byte[1000];
+            inFs.read(txt);
+            inFs.close();
+            diaryStr = (new String(txt)).trim();
+        }catch (IOException e){
+            question.setHint("이 날은 받은 질문이 없습니다.");
+        }
+
+        return diaryStr;
+    }
+
 
 }
 
