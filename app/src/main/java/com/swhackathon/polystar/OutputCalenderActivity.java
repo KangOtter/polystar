@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class OutputActivity extends AppCompatActivity {
+public class OutputCalenderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class OutputActivity extends AppCompatActivity {
         back1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), BookmarkActivity.class);
+                Intent intent = new Intent(getApplicationContext(), CalanderActivity.class);
                 startActivity(intent);
                 finish();
             }

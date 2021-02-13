@@ -3,6 +3,7 @@ package com.swhackathon.polystar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -19,8 +20,13 @@ public class CalanderActivity extends AppCompatActivity {
     DatePicker datePicker;
     String Afilename;
     String Qfilename;
-    TextView answer;
-    TextView question;
+    Button answer;
+    Button question;
+
+    //다른 화면에서 질문과 대답을 띄우기 위한 변수
+    int yearToGo;
+    int monthToGo;
+    int dayToGo;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,7 +38,6 @@ public class CalanderActivity extends AppCompatActivity {
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
-        int ck = 0;
 
         datePicker = findViewById(R.id.datepicker);
 
@@ -47,6 +52,10 @@ public class CalanderActivity extends AppCompatActivity {
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
 
                 int ck = 1;
+
+                yearToGo = i;
+                monthToGo = i1;
+                dayToGo = i2;
 
                 //질문 출력
                 question = findViewById(R.id.question1);
@@ -84,6 +93,31 @@ public class CalanderActivity extends AppCompatActivity {
                 Afilename = Integer.toString(i) + "_" + Integer.toString(i1) + "_" + Integer.toString(i2) + "_" + 3 + "_" + "A";
                 String str3 = readAnswer(Afilename);
                 answer.setText(str3);
+            }
+        });
+
+        Button Q1 = (Button) findViewById(R.id.question1);
+        Q1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), OutputCalenderActivity.class);
+
+                //질문을 넘겨주기 위한 코드
+                Qfilename = Integer.toString(yearToGo) + "_" + Integer.toString(monthToGo) + "_" + Integer.toString(dayToGo) + "_" + 1 + "_" + "Q";
+                String question = readAnswer(Qfilename);
+                intent.putExtra("질문", question);
+
+                //대답을 넘겨주기 위한 코드
+                Afilename = Integer.toString(yearToGo) + "_" + Integer.toString(monthToGo) + "_" + Integer.toString(dayToGo) + "_" + 1 + "_" + "A";
+                String answer = readAnswer(Afilename);
+                intent.putExtra("답", answer);
+
+                //질문을 넘겨주기 위한 코드
+                String dateToGo = " " + yearToGo + "." + monthToGo + "." + dayToGo;
+                intent.putExtra("날짜", dateToGo);
+
+                startActivity(intent);
+                finish();
             }
         });
 

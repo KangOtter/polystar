@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_calander"
     android:orientation="vertical"
-    tools:context=".CalanderActivity" >
+    tools:context=".CalanderActivity">
 
 
     <ImageButton
@@ -93,84 +92,102 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
+    <Button
         android:id="@+id/question1"
         android:layout_width="299dp"
         android:layout_height="28dp"
+        android:background="@null"
         android:text="보고싶은 날짜를 선택해 주세요"
-        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textColorHint="#8AFFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.618" />
 
-    <TextView
+    <Button
         android:id="@+id/question2"
         android:layout_width="299dp"
         android:layout_height="28dp"
+        android:background="@null"
         android:text=""
-        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textColorHint="#8AFFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.729" />
 
-    <TextView
+    <Button
         android:id="@+id/question3"
         android:layout_width="299dp"
         android:layout_height="28dp"
+        android:background="@null"
         android:text=""
-        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textColorHint="#8AFFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.84" />
 
-    <TextView
+    <Button
         android:id="@+id/answer1"
         android:layout_width="299dp"
         android:layout_height="28dp"
+        android:background="@null"
         android:text=""
-        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textColorHint="#8AFFFFFF"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.658" />
 
-    <TextView
+    <Button
         android:id="@+id/answer2"
         android:layout_width="299dp"
         android:layout_height="28dp"
+        android:background="@null"
         android:text=""
-        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textColorHint="#8AFFFFFF"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.769" />
 
-    <TextView
+    <Button
         android:id="@+id/answer3"
         android:layout_width="299dp"
         android:layout_height="28dp"
+        android:background="@null"
         android:text=""
-        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textColorHint="#8AFFFFFF"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
