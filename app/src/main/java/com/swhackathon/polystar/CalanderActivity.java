@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,6 +28,8 @@ public class CalanderActivity extends AppCompatActivity {
     int yearToGo;
     int monthToGo;
     int dayToGo;
+
+    int ifDateChange = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,7 @@ public class CalanderActivity extends AppCompatActivity {
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
 
                 int ck = 1;
+                ifDateChange =  1;
 
                 yearToGo = i;
                 monthToGo = i1;
@@ -116,8 +120,16 @@ public class CalanderActivity extends AppCompatActivity {
                 String dateToGo = " " + yearToGo + "." + monthToGo + "." + dayToGo;
                 intent.putExtra("날짜", dateToGo);
 
-                startActivity(intent);
-                finish();
+                if(question != null && ifDateChange == 1) {
+                    startActivity(intent);
+                    finish();
+                }
+                else if(ifDateChange == 0) {
+                    Toast.makeText(getApplicationContext(), String.format("날짜를 설정하고 눌러주세요"), Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), String.format("받은 질문이 없습니다"), Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
